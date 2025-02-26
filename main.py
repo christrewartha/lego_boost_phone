@@ -6,6 +6,8 @@ from pylgbst import get_connection_gatt
 from pylgbst import get_connection_bleak
 from pylgbst.peripherals import EncodedMotor, TiltSensor, Current, Voltage, COLORS, COLOR_BLACK
 
+import speech
+
 import platform
 import os
 supported_platforms = ["Windows"]
@@ -116,6 +118,7 @@ if __name__ == '__main__':
         print("This platform is not supported")
         exit(1)
 
+    speech.text_to_speech("Establishing connection to the hub. Please wait...")
     hub = get_connection()
     control_state = "user_control"  # Introduce control state
 

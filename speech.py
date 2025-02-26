@@ -2,7 +2,7 @@ from gtts import gTTS
 from playsound3 import playsound
 
 def text_to_speech(text):
-    res = gTTS(text=text, lang='en')
+    res = gTTS(text=text, lang='en', tld='co.uk')
     filename = "output.mp3"
     res.save(filename)
     playsound(filename)
